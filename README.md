@@ -9,22 +9,26 @@ This repository demonstrates a tiny reproducible MLOps flow:
 
 ## Quick start (local)
 1. Create and activate a venv (example using python 3.13 or 3.11):
-    python -m venv .venv
+
+   python3.13 -m venv .venv
    
     source .venv/bin/activate
 
 3. Install dependencies:
+   
     pip install --upgrade pip setuptools wheel
    
     pip install -r requirements.txt
 
-5. Train the model:
+4. Train the model:
+   
     python train.py
 
-6. Run a single prediction from CLI:
-    python run_model.py --input "[5.1, 3.5, 1.4, 0.2]"
+5. Run a single prediction from CLI:
 
-7. Start the API:
+   python run_model.py --input "[5.1, 3.5, 1.4, 0.2]"
+
+6. Start the API:
     python src/app.py
    Then test:
     curl -X POST "http://127.0.0.1:5000/predict" -H "Content-Type: application/json" -d '{"features":[5.1,3.5,1.4,0.2]}'
