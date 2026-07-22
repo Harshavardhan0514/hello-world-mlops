@@ -5,6 +5,11 @@ This repository demonstrates a tiny reproducible MLOps flow:
 2. Run predictions from the command line with `run_model.py --input "[5.1,3.5,1.4,0.2]"`
 3. Start a minimal Flask app with `python src/app.py` that serves `/predict`
 4. Build a Docker image with `docker build -t hello-mlops .`
+   
+`docker run -d -p 5001:5001 hello-mlops:latest`
+
+`docker ps`
+
 5. CI trains the model and uploads artifacts
 
 ## Quick start (local)
